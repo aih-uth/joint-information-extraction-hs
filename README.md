@@ -5,5 +5,6 @@
 ## 使用方法
 
 1. 本リポジトリをダウンロードして解凍する。
-2. 解凍したファイルをGoogle Driveのマイドライブの直下にアップロードする (フォルダ名はUTH-17_Joint_Inferenceへリネームしてください)。
-3. inference (Google Colab).ipynbを開いて実行する (必要なファイルが自動でダウンロードされるので、Google Driveの空き容量にご注意ください)。
+2. ファイル名をUTH-17_Joint_Inferenceへ変更する。
+3. 解凍したファイルをGoogle Driveのマイドライブの直下にアップロードする。
+4. inference (Google Colab).ipynbを開いて実行する (必要なファイルが自動でダウンロードされるので、Google Driveの空き容量にご注意ください)。
