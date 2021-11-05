@@ -1,0 +1,198 @@
+<!––
+MIT License
+
+Copyright (c) 2019-2020 Markus Eberts
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+––>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entity Extraction Examples</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .entity {
+            font-weight: bold;
+            display:inline-block;
+            text-align:center;
+        }
+
+        .type {
+            display:block;
+            font-size:12px;
+        }
+
+        .border-row-td {
+            border-bottom: solid 1px black !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .border-row-tr {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .border-col-td {
+            border-right: solid 1px black !important;
+        }
+
+        .tp {
+            background-color: #c9eec1;
+        }
+
+        .fp {
+            background-color: #e7ecfc;
+        }
+
+        .fn {
+            background-color: #ffd5cb;
+        }
+
+        .tp-box {
+            float:left;
+            background-color: #c9eec1;
+            border: solid 1px black;
+            width: 20px;
+            height: 20px;
+        }
+
+        .fp-box {
+            float:left;
+            background-color: #e7ecfc;
+            border: solid 1px black;
+            width: 20px;
+            height: 20px;
+        }
+
+        .fn-box {
+            float:left;
+            background-color: #ffd5cb;
+            border: solid 1px black;
+            width: 20px;
+            height: 20px;
+        }
+
+        .doc-perfect {
+            color: #03e06f;
+            vertical-align: middle;
+        }
+
+        .doc-good {
+            color: #e0ca4f;
+            vertical-align: middle;
+        }
+
+        .doc-bad {
+            color: #ff2942;
+            vertical-align: middle;
+        }
+
+        .vertical-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .doc {
+            margin-bottom: 10px;
+        }
+
+        .doc-text {
+            white-space: normal;
+        }
+
+    </style>
+</head>
+<body style="overflow-x:scroll; white-space: nowrap; padding-left: 10px; padding-top: 10px;">
+
+<h2> Entity Extraction Examples</h2>
+
+<p></p>
+
+<div id="evaluation">
+    <div id="accordion">
+        
+            
+
+            <div class="card doc">
+                <div class="collapsed" data-toggle="collapse"
+                     data-target="#collapse-0" style="cursor: pointer;">
+                    <div class="card-header" id="heading-0">
+                        <div class="row vertical-center">
+                            <div class="col-1 vertical-center">
+                                (0) &nbsp;
+                            </div>
+
+                            <div class="col">
+                                <div class="doc-text">
+                                    <b> {% text %} </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="collapse-0" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Score</th>
+                                <th>Text</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+
+                            {% results %}
+                            
+
+                            <tr class="border-row-tr">
+                                <td class="border-row-td"></td>
+                                <td class="border-row-td"></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
