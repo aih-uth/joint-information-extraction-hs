@@ -9,6 +9,13 @@
 3. 解凍したファイルをGoogle Driveのマイドライブの直下にアップロードする。
 4. inference (Google Colab).ipynbを開いて実行する (必要なファイルが自動でダウンロードされるので、Google Driveの空き容量にご注意ください)。
 
+## 引用
+
+本コードを使用する際は以下の論文を引用してください。
+```
+柴田 大作, 河添 悦昌, 篠原 恵美子, 嶋本 公徳. 詳細なアノテーション基準に基づく症例報告コーパスからの固有表現及び関係の抽出精度. 第41回医療情報学連合大会, pp. XXX-YYY, 2021.
+```
+
 ## 参考文献
 ```
 [1] Eberts, Markus, and Adrian Ulges. "Span-based joint entity and relation extraction with transformer pre-training." arXiv preprint arXiv:1909.07755 (2019).
