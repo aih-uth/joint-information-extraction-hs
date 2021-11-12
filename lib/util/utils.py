@@ -18,11 +18,11 @@ class NpEncoder(json.JSONEncoder):
             return super(NpEncoder, self).default(obj)
 
 
-def load_model(hyper):
-    tag2idx = json.load(open(hyper.tag2idx_path, 'r'))
-    rel2idx = json.load(open(hyper.rel2idx_path, 'r'))
-    model = BERT_JOINT(tag2idx, rel2idx, hyper.bert_path)
-    model.load_state_dict(torch.load('{0}'.format(hyper.model_path),  map_location='cpu'))
+def load_model(paras):
+    tag2idx = json.load(open(paras.tag2idx_path, 'r'))
+    rel2idx = json.load(open(paras.rel2idx_path, 'r'))
+    model = BERT_JOINT(tag2idx, rel2idx, paras.bert_path)
+    model.load_state_dict(torch.load('{0}'.format(paras.model_path),  map_location='cpu'))
     return model, tag2idx, rel2idx
 
 

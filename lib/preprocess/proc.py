@@ -26,9 +26,9 @@ def uth_bert_preprocess(text, nfkc=False, h2z=True):
     return text
 
 
-def mecab_wakati(sentence, hyper):
-    mecab = MeCab.Tagger("-d {0} -u {1}".format(hyper.neologd_path, hyper.manbyo_path))
-    tokenizer = BertTokenizer(Path("{0}".format(hyper.bert_path)) / "vocab.txt", do_lower_case=False, do_basic_tokenize=False)
+def mecab_wakati(sentence, paras):
+    mecab = MeCab.Tagger("-d {0} -u {1}".format(paras.neologd_path, paras.manbyo_path))
+    tokenizer = BertTokenizer(Path("{0}".format(paras.bert_path)) / "vocab.txt", do_lower_case=False, do_basic_tokenize=False)
     wakatis = []
     for ws in mecab.parse(sentence).split('\n'):
         if ws == "EOS":
@@ -38,6 +38,6 @@ def mecab_wakati(sentence, hyper):
     return wakatis[:510]
 
 
-def make_vector(tokens, hyper):
-    tokenizer = BertTokenizer(Path("{0}".format(hyper.bert_path)) / "vocab.txt", do_lower_case=False, do_basic_tokenize=False)
-    return [tokenizer.convert_tokens_to_ids(["[CLS]"] + tokens[:hyper.max_text_len] + ["[SEP]"])]
+def make_vector(tokens, paras):
+    tokenizer = BertTokenizer(Path("{0}".format(paras.bert_path)) / "vocab.txt", do_lower_case=False, do_basic_tokenize=False)
+    return [tokenizer.convert_tokens_to_ids(["[CLS]"] + tokens[:paras.max_text_len] + ["[SEP]"])]
