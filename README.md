@@ -31,5 +31,5 @@
 [4] SpERT: Span-based Entity and Relation Transformer, https://github.com/lavis-nlp/spert
 [5] pytorch-crf: https://pytorch-crf.readthedocs.io/en/stable/
 [6] deepdep: https://github.com/tatsuokun/deepdep
-[7] 篠原 恵美子，河添 悦昌，柴田 大作，嶋本 公徳，関 倫久. 医療テキストに対する網羅的な所見アノテーションのためのアノテーション基準の構築. 第25回日本医療情報学春季学術大会.
+[7] 篠原 恵美子, 河添 悦昌, 柴田 大作, 嶋本 公徳, 関 倫久. 医療テキストに対する網羅的な所見アノテーションのためのアノテーション基準の構築. 第25回日本医療情報学春季学術大会.
 ```
