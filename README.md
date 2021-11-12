@@ -11,7 +11,7 @@
 
 ## モデルについて
 
-本モデルは[症例報告コーパス](https://ai-health.m.u-tokyo.ac.jp/home/research/corpus)に掲載される[iCorpus_202108](https://ai-health.m.u-tokyo.ac.jp/labweb/wp-content/uploads/icorpus_202108.zip)に含まれる、182症例2,172文を用いて学習を行ったモデルです。
+本モデルは[症例報告コーパス](https://ai-health.m.u-tokyo.ac.jp/home/research/corpus)に掲載される[iCorpus_202108](https://ai-health.m.u-tokyo.ac.jp/labweb/wp-content/uploads/icorpus_202108.zip)に含まれる、182症例2,172文を用いて学習を行ったものです。
 
 モデルの詳細は詳細抄録を、コーパスの詳細は[7]をご確認ください。
 
