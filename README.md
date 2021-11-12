@@ -12,7 +12,8 @@
 ## モデルについて
 
 本モデルは[症例報告コーパス](https://ai-health.m.u-tokyo.ac.jp/home/research/corpus)のうち、182症例2,172文を用いて学習を行いました。
-詳細は詳細抄録をご確認ください。
+
+モデルの詳細は詳細抄録を、コーパスの詳細は[7]をご確認ください。
 
 
 ## 引用
@@ -30,4 +31,5 @@
 [4] SpERT: Span-based Entity and Relation Transformer, https://github.com/lavis-nlp/spert
 [5] pytorch-crf: https://pytorch-crf.readthedocs.io/en/stable/
 [6] deepdep: https://github.com/tatsuokun/deepdep
+[7] 篠原 恵美子，河添 悦昌，柴田 大作，嶋本 公徳，関 倫久. 医療テキストに対する網羅的な所見アノテーションのためのアノテーション基準の構築. 第25回日本医療情報学春季学術大会.
 ```
