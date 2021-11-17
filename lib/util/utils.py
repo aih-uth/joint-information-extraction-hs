@@ -6,18 +6,6 @@ from lib.models import BERT_JOINT
 import json
 
 
-class NpEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, np.integer):
-            return int(obj)
-        elif isinstance(obj, np.floating):
-            return float(obj)
-        elif isinstance(obj, np.ndarray):
-            return obj.tolist()
-        else:
-            return super(NpEncoder, self).default(obj)
-
-
 def load_model(paras):
     tag2idx = json.load(open(paras.tag2idx_path, 'r'))
     rel2idx = json.load(open(paras.rel2idx_path, 'r'))
